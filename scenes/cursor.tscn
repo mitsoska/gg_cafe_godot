@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://yg8vvgnj1p0h"]
+
+[ext_resource type="Texture2D" uid="uid://bc1210rgcopcf" path="res://assets/interface/pointer_normal.png" id="1_hg4kf"]
+[ext_resource type="Texture2D" uid="uid://dfx7b0d1vmowd" path="res://assets/interface/pointer_hover.png" id="2_1jsx1"]
+[ext_resource type="Texture2D" uid="uid://1mt0lurdk7s7" path="res://assets/interface/pointer_grab1.png" id="3_d4pov"]
+[ext_resource type="Texture2D" uid="uid://c77xt01sfb5j4" path="res://assets/interface/pointer_grab2.png" id="4_eqgak"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8nsgt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hg4kf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1jsx1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_d4pov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_eqgak")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_8nsgt")

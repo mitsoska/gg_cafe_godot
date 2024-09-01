@@ -1,0 +1,230 @@
+[gd_scene load_steps=13 format=3 uid="uid://6qfxm7vn6283"]
+
+[ext_resource type="Script" path="res://assets/scripts/game.gd" id="1_fgjeu"]
+[ext_resource type="Texture2D" uid="uid://di7i68m2r8wgo" path="res://assets/background.png" id="1_h6ji5"]
+[ext_resource type="PackedScene" uid="uid://cddj7t7pnn6dr" path="res://scenes/interface.tscn" id="1_ub42b"]
+[ext_resource type="Texture2D" uid="uid://0qo02o38lqvn" path="res://assets/floor_tileset.png" id="2_ha75g"]
+[ext_resource type="Texture2D" uid="uid://xlefrccjxkb1" path="res://assets/wall_tileset.png" id="3_r70li"]
+[ext_resource type="PackedScene" uid="uid://d03e40yc4fvtt" path="res://scenes/player.tscn" id="5_1fian"]
+[ext_resource type="Texture2D" uid="uid://dab86hv4bhci6" path="res://assets/deco_tileset.png" id="6_djc86"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_adjn6"]
+texture = ExtResource("2_ha75g")
+texture_region_size = Vector2i(410, 205)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+20:0/0 = 0
+21:0/0 = 0
+22:0/0 = 0
+23:0/0 = 0
+24:0/0 = 0
+25:0/0 = 0
+26:0/0 = 0
+27:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_p77rd"]
+tile_shape = 1
+tile_layout = 5
+tile_size = Vector2i(410, 205)
+sources/85 = SubResource("TileSetAtlasSource_adjn6")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_62v4o"]
+texture = ExtResource("3_r70li")
+texture_region_size = Vector2i(225, 765)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+20:0/0 = 0
+21:0/0 = 0
+22:0/0 = 0
+23:0/0 = 0
+24:0/0 = 0
+25:0/0 = 0
+26:0/0 = 0
+27:0/0 = 0
+28:0/0 = 0
+29:0/0 = 0
+30:0/0 = 0
+31:0/0 = 0
+32:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_txnx5"]
+texture = ExtResource("6_djc86")
+texture_region_size = Vector2i(225, 765)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+20:0/0 = 0
+21:0/0 = 0
+22:0/0 = 0
+23:0/0 = 0
+24:0/0 = 0
+25:0/0 = 0
+26:0/0 = 0
+27:0/0 = 0
+28:0/0 = 0
+29:0/0 = 0
+30:0/0 = 0
+31:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_xgj4d"]
+tile_shape = 1
+tile_layout = 5
+tile_size = Vector2i(410, 205)
+sources/0 = SubResource("TileSetAtlasSource_62v4o")
+sources/1 = SubResource("TileSetAtlasSource_txnx5")
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_fgjeu")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = -87.0
+offset_top = -33.0
+offset_right = 1302.0
+offset_bottom = 1056.0
+mouse_filter = 2
+texture = ExtResource("1_h6ji5")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_lock_ = true
+
+[node name="World" type="Node2D" parent="."]
+position = Vector2(631, 248)
+scale = Vector2(0.28, 0.28)
+
+[node name="FloorTilemap" type="TileMap" parent="World"]
+y_sort_enabled = true
+position = Vector2(-203.333, -103.333)
+tile_set = SubResource("TileSet_p77rd")
+format = 2
+layer_0/name = "Floor"
+layer_0/y_sort_enabled = true
+layer_0/z_index = 1
+layer_0/tile_data = PackedInt32Array(393216, 393301, 0, 327680, 393301, 0, 262144, 393301, 0, 196608, 393301, 0, 131072, 393301, 0, 65536, 131157, 0, 0, 131157, 0, 1, 131157, 0, 65537, 131157, 0, 131073, 393301, 0, 196609, 393301, 0, 262145, 393301, 0, 327681, 393301, 0, 393217, 393301, 0, 327682, 131157, 0, 262146, 131157, 0, 196610, 131157, 0, 131074, 131157, 0, 65538, 131157, 0, 2, 131157, 0, 393218, 131157, 0, 393219, 131157, 0, 327683, 131157, 0, 262147, 131157, 0, 196611, 131157, 0, 131075, 131157, 0, 65539, 131157, 0, 3, 131157, 0, 65540, 131157, 0, 131076, 131157, 0, 196612, 131157, 0, 196613, 131157, 0, 262149, 131157, 0, 327685, 131157, 0, 393221, 131157, 0, 393220, 131157, 0, 327684, 131157, 0, 262148, 131157, 0, 131077, 131157, 0, 65541, 131157, 0, 5, 131157, 0, 4, 131157, 0, 6, 131157, 0, 65542, 131157, 0, 131078, 131157, 0, 196614, 131157, 0, 262150, 131157, 0, 327686, 131157, 0, 393222, 131157, 0)
+
+[node name="TileOverlay" type="Sprite2D" parent="World/FloorTilemap"]
+visible = false
+modulate = Color(0, 0, 0, 0.145098)
+z_index = 3
+position = Vector2(-1026.67, 716.666)
+texture = ExtResource("2_ha75g")
+hframes = 28
+
+[node name="Furniture" type="Node2D" parent="World"]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(-1335, -600)
+
+[node name="Player" parent="World/Furniture" instance=ExtResource("5_1fian")]
+z_index = 1
+position = Vector2(1841.67, 890)
+
+[node name="WallTilemapY" type="TileMap" parent="World"]
+y_sort_enabled = true
+position = Vector2(-109.571, -586.717)
+tile_set = SubResource("TileSet_xgj4d")
+format = 2
+layer_0/name = "Walls"
+layer_0/y_sort_enabled = true
+layer_0/tile_data = PackedInt32Array(65536, 1114112, 0, 131072, 1114112, 0, 196608, 1114112, 0, 262144, 1114112, 0, 327680, 1114112, 0, 393216, 1114112, 0, 458752, 1114112, 0)
+layer_1/name = "Decorations"
+layer_1/y_sort_enabled = true
+layer_1/z_index = 1
+
+[node name="WallTilemapX" type="TileMap" parent="World"]
+y_sort_enabled = true
+position = Vector2(-298.857, -586.717)
+tile_set = SubResource("TileSet_xgj4d")
+format = 2
+layer_0/name = "Walls"
+layer_0/y_sort_enabled = true
+layer_0/tile_data = PackedInt32Array(1, 1114112, 268435456, 2, 1114112, 268435456, 3, 1114112, 268435456, 4, 1114112, 268435456, 5, 1114112, 268435456, 6, 1114112, 268435456, 7, 1114112, 268435456)
+layer_1/name = "Decorations"
+layer_1/y_sort_enabled = true
+layer_1/z_index = 1
+layer_1/tile_data = PackedInt32Array(6, 196609, 268435456, 4, 196609, 268435456, 2, 196609, 268435456)
+
+[node name="Interface" parent="." instance=ExtResource("1_ub42b")]
+z_index = 10
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 1281.0
+offset_bottom = 720.0
+grow_horizontal = 1
+grow_vertical = 1
+mouse_filter = 2
+
+[node name="Extra" type="Control" parent="."]
+z_index = 10
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="Extra"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1238.0
+offset_bottom = 681.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.407843)

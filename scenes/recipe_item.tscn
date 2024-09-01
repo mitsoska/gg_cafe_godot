@@ -1,0 +1,516 @@
+[gd_scene load_steps=71 format=3 uid="uid://l42ukc36l6ck"]
+
+[ext_resource type="Texture2D" uid="uid://dfiqoytscmihs" path="res://assets/interface/recipe_item.png" id="1_1sf7g"]
+[ext_resource type="Script" path="res://assets/scripts/recipe_item.gd" id="1_h3j50"]
+[ext_resource type="Texture2D" uid="uid://cwgfrhh5le8t4" path="res://assets/interface/money.png" id="2_esyqc"]
+[ext_resource type="PackedScene" uid="uid://ckcw76ujhs7bt" path="res://scenes/food.tscn" id="2_povyn"]
+[ext_resource type="Texture2D" uid="uid://d18fi1ta0lg41" path="res://assets/interface/xp.png" id="3_1sfbq"]
+[ext_resource type="Texture2D" uid="uid://cvr1umfd7jksh" path="res://assets/interface/cook.png" id="5_5ukfh"]
+[ext_resource type="Texture2D" uid="uid://dyuortljvtspk" path="res://assets/interface/buy_shop.png" id="6_b6rnp"]
+[ext_resource type="Texture2D" uid="uid://dplclw4mo05lx" path="res://assets/interface/empty_star.png" id="7_vp75d"]
+[ext_resource type="Texture2D" uid="uid://cuq71ocf6ami0" path="res://assets/ingredients/item_01.png" id="8_h1rgx"]
+[ext_resource type="Texture2D" uid="uid://d4dsilcumn60j" path="res://assets/ingredients/item_02.png" id="9_7ysmu"]
+[ext_resource type="Texture2D" uid="uid://byr0sdl8myp6m" path="res://assets/ingredients/item_03.png" id="10_rrx83"]
+[ext_resource type="Texture2D" uid="uid://502ey4o0okms" path="res://assets/ingredients/item_04.png" id="11_ejuq1"]
+[ext_resource type="Texture2D" uid="uid://bobyfmajkeehx" path="res://assets/ingredients/item_05.png" id="12_lcwif"]
+[ext_resource type="Texture2D" uid="uid://dh1maoe5mu0gm" path="res://assets/ingredients/item_06.png" id="13_a02vv"]
+[ext_resource type="Texture2D" uid="uid://omh5a46p6f05" path="res://assets/ingredients/item_07.png" id="14_ol7v4"]
+[ext_resource type="Texture2D" uid="uid://bqkaljeqkklk3" path="res://assets/ingredients/item_08.png" id="15_cdcsb"]
+[ext_resource type="Texture2D" uid="uid://bwoviv16kcuw0" path="res://assets/ingredients/item_09.png" id="16_frfkb"]
+[ext_resource type="Texture2D" uid="uid://5h8s270xsnut" path="res://assets/ingredients/item_10.png" id="17_nvlo7"]
+[ext_resource type="Texture2D" uid="uid://xe7whf6e0dqm" path="res://assets/ingredients/item_11.png" id="18_2mk0r"]
+[ext_resource type="Texture2D" uid="uid://daf1crkc2jjj8" path="res://assets/ingredients/item_12.png" id="19_61it1"]
+[ext_resource type="Texture2D" uid="uid://ce4kgntyqxh05" path="res://assets/ingredients/item_13.png" id="20_nbrp8"]
+[ext_resource type="Texture2D" uid="uid://clfcfo1cus0fc" path="res://assets/ingredients/item_14.png" id="21_o6o5q"]
+[ext_resource type="Texture2D" uid="uid://dxotejj6f5r4f" path="res://assets/ingredients/item_15.png" id="22_50e5y"]
+[ext_resource type="Texture2D" uid="uid://nublhxs6wf45" path="res://assets/ingredients/item_16.png" id="23_ltnc4"]
+[ext_resource type="Texture2D" uid="uid://b1crqwcmyucwm" path="res://assets/ingredients/item_17.png" id="24_fiegk"]
+[ext_resource type="Texture2D" uid="uid://vtbust1ckr2" path="res://assets/ingredients/item_18.png" id="25_j4csd"]
+[ext_resource type="Texture2D" uid="uid://b46yuonthhuts" path="res://assets/ingredients/item_19.png" id="26_17mp3"]
+[ext_resource type="Texture2D" uid="uid://cttav1f83q1wq" path="res://assets/ingredients/item_20.png" id="27_f128t"]
+[ext_resource type="Texture2D" uid="uid://hcb6qabjliwq" path="res://assets/ingredients/item_21.png" id="28_kcjsb"]
+[ext_resource type="Texture2D" uid="uid://bde1on01pjtlo" path="res://assets/ingredients/item_22.png" id="29_q8k0u"]
+[ext_resource type="Texture2D" uid="uid://b2hijwfevn3s5" path="res://assets/ingredients/item_23.png" id="30_sodov"]
+[ext_resource type="Texture2D" uid="uid://84reltl31adg" path="res://assets/ingredients/item_24.png" id="31_htvy3"]
+[ext_resource type="Texture2D" uid="uid://kqagbcwklf5j" path="res://assets/ingredients/item_25.png" id="32_k0iko"]
+[ext_resource type="Texture2D" uid="uid://dbitpqreqabis" path="res://assets/ingredients/item_26.png" id="33_yr1gw"]
+[ext_resource type="Texture2D" uid="uid://cvvi4herqkj1h" path="res://assets/ingredients/item_27.png" id="34_4e10g"]
+[ext_resource type="Texture2D" uid="uid://bqsr7tll3txq5" path="res://assets/ingredients/item_28.png" id="35_upscm"]
+[ext_resource type="Texture2D" uid="uid://btjt2g6ga1py0" path="res://assets/ingredients/item_29.png" id="36_igukt"]
+[ext_resource type="Texture2D" uid="uid://bvjwvuv1871rm" path="res://assets/ingredients/item_30.png" id="37_6v4v8"]
+[ext_resource type="Texture2D" uid="uid://keeer48c0rti" path="res://assets/ingredients/item_31.png" id="38_2i6ex"]
+[ext_resource type="Texture2D" uid="uid://kujcqntbn43x" path="res://assets/ingredients/item_32.png" id="39_gmd4q"]
+[ext_resource type="Texture2D" uid="uid://byokk78uhb0x8" path="res://assets/ingredients/item_33.png" id="40_c3dex"]
+[ext_resource type="Texture2D" uid="uid://c40dyxw07smms" path="res://assets/ingredients/item_34.png" id="41_is6qd"]
+[ext_resource type="Texture2D" uid="uid://u2jy60p0mdxh" path="res://assets/ingredients/item_35.png" id="42_k4cm2"]
+[ext_resource type="Texture2D" uid="uid://ucgqcgdrqedl" path="res://assets/ingredients/item_36.png" id="43_5kylm"]
+[ext_resource type="Texture2D" uid="uid://o5t5idkf8ad7" path="res://assets/ingredients/item_37.png" id="44_ejmj0"]
+[ext_resource type="Texture2D" uid="uid://brxrei758inhv" path="res://assets/ingredients/item_38.png" id="45_iara6"]
+[ext_resource type="Texture2D" uid="uid://ckp1ebit05nno" path="res://assets/ingredients/item_39.png" id="46_88fhh"]
+[ext_resource type="Texture2D" uid="uid://ulkoqtqwlbeo" path="res://assets/ingredients/item_40.png" id="47_w7yk3"]
+[ext_resource type="Texture2D" uid="uid://e6oipgm0qmu7" path="res://assets/ingredients/item_41.png" id="48_qw1mm"]
+[ext_resource type="Texture2D" uid="uid://dmkgy7slgmtud" path="res://assets/ingredients/item_42.png" id="49_21t3y"]
+[ext_resource type="Texture2D" uid="uid://dp3xuw65cnrje" path="res://assets/ingredients/item_43.png" id="50_o3kky"]
+[ext_resource type="Texture2D" uid="uid://bcm3ixlf8vmfm" path="res://assets/ingredients/item_44.png" id="51_on4v6"]
+[ext_resource type="Texture2D" uid="uid://c3r3gfggsacfc" path="res://assets/ingredients/item_45.png" id="52_kk2ft"]
+[ext_resource type="Texture2D" uid="uid://c4nkfkblhpely" path="res://assets/ingredients/item_46.png" id="53_mgg3e"]
+[ext_resource type="Texture2D" uid="uid://b6govcw3nd66n" path="res://assets/ingredients/item_47.png" id="54_smma4"]
+[ext_resource type="Texture2D" uid="uid://c6m2jvo1gfnl7" path="res://assets/ingredients/item_48.png" id="55_kddeu"]
+[ext_resource type="Texture2D" uid="uid://lvy66313td4h" path="res://assets/ingredients/item_49.png" id="56_fe3kd"]
+[ext_resource type="Texture2D" uid="uid://bvo2idq7vdjha" path="res://assets/ingredients/item_50.png" id="57_jnvci"]
+[ext_resource type="Texture2D" uid="uid://c4sacp36c4bc5" path="res://assets/ingredients/item_51.png" id="58_5c8ux"]
+[ext_resource type="Texture2D" uid="uid://cvghe2bqqu7wg" path="res://assets/ingredients/item_52.png" id="59_o447o"]
+[ext_resource type="Texture2D" uid="uid://y5wrhdfg1ui2" path="res://assets/ingredients/item_53.png" id="60_crtsc"]
+[ext_resource type="Texture2D" uid="uid://dl2us2o2n7o3c" path="res://assets/ingredients/item_54.png" id="61_f8qhs"]
+[ext_resource type="Texture2D" uid="uid://b0kb6eds3kt0a" path="res://assets/interface/type_burger.png" id="62_n4i88"]
+[ext_resource type="Texture2D" uid="uid://bjpfqt6mavxco" path="res://assets/interface/type_candy.png" id="63_7ayfb"]
+[ext_resource type="Texture2D" uid="uid://66i4kisvpbkk" path="res://assets/interface/type_fruit.png" id="64_g4slw"]
+[ext_resource type="Texture2D" uid="uid://v0u5h45rhlnf" path="res://assets/interface/type_main.png" id="65_bkmbr"]
+[ext_resource type="Texture2D" uid="uid://c46u6demdr37" path="res://assets/interface/type_soup.png" id="66_s6qaa"]
+[ext_resource type="Texture2D" uid="uid://dtu5jvjpgsmg7" path="res://assets/interface/type_vegetable.png" id="67_pf712"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fyjvi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("62_n4i88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_7ayfb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_g4slw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_bkmbr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_s6qaa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_pf712")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ny37g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_h1rgx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_7ysmu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_rrx83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ejuq1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_lcwif")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_a02vv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ol7v4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_cdcsb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_frfkb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_nvlo7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_2mk0r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_61it1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_nbrp8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_o6o5q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_50e5y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ltnc4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_fiegk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_j4csd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_17mp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_f128t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_kcjsb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_q8k0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_sodov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_htvy3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_k0iko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_yr1gw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_4e10g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_upscm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_igukt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_6v4v8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_2i6ex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_gmd4q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_c3dex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_is6qd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_k4cm2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_5kylm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_ejmj0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_iara6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_88fhh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_w7yk3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_qw1mm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_21t3y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_o3kky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_on4v6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_kk2ft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_mgg3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_smma4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_kddeu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_fe3kd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_jnvci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_5c8ux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_o447o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_crtsc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_f8qhs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="RecipeItem" type="Node2D"]
+script = ExtResource("1_h3j50")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = -259.0
+offset_top = -402.0
+offset_right = 262.0
+offset_bottom = -3.0
+texture = ExtResource("1_1sf7g")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Money" type="TextureRect" parent="."]
+offset_left = 2.0
+offset_top = -250.0
+offset_right = 55.0
+offset_bottom = -208.0
+texture = ExtResource("2_esyqc")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="XP" type="TextureRect" parent="."]
+offset_left = 5.0
+offset_top = -203.0
+offset_right = 57.0
+offset_bottom = -161.0
+texture = ExtResource("3_1sfbq")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Type" type="AnimatedSprite2D" parent="."]
+position = Vector2(-237, -194)
+scale = Vector2(0.334615, 0.334615)
+sprite_frames = SubResource("SpriteFrames_fyjvi")
+
+[node name="Food" parent="." instance=ExtResource("2_povyn")]
+position = Vector2(-131, -243)
+scale = Vector2(0.560606, 0.560606)
+
+[node name="MoneyText" type="Label" parent="."]
+offset_left = 69.0
+offset_top = -241.0
+offset_right = 232.0
+offset_bottom = -218.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "24 per serving"
+
+[node name="ServingsText" type="Label" parent="."]
+offset_left = -4.0
+offset_top = -316.0
+offset_right = 159.0
+offset_bottom = -293.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "Servings: 10"
+
+[node name="ReadyText" type="Label" parent="."]
+offset_left = -4.0
+offset_top = -292.0
+offset_right = 159.0
+offset_bottom = -269.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "Ready in: 3:00"
+
+[node name="FoodText" type="Label" parent="."]
+offset_left = -239.0
+offset_top = -369.0
+offset_right = 246.0
+offset_bottom = -327.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Omelet
+"
+horizontal_alignment = 1
+
+[node name="XPText" type="Label" parent="."]
+offset_left = 69.0
+offset_top = -197.0
+offset_right = 233.0
+offset_bottom = -169.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "5"
+
+[node name="ActionButton" type="TextureButton" parent="."]
+offset_left = 175.0
+offset_top = -125.0
+offset_right = 277.0
+offset_bottom = -36.0
+tooltip_text = "
+"
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("5_5ukfh")
+texture_disabled = ExtResource("6_b6rnp")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Stars" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Star" type="TextureRect" parent="Stars"]
+layout_mode = 0
+offset_left = -81.0
+offset_top = -410.0
+offset_right = -41.0
+offset_bottom = -367.0
+texture = ExtResource("7_vp75d")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Star3" type="TextureRect" parent="Stars"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = -410.0
+offset_right = 79.0
+offset_bottom = -367.0
+texture = ExtResource("7_vp75d")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Star2" type="TextureRect" parent="Stars"]
+layout_mode = 0
+offset_left = -20.0
+offset_top = -418.0
+offset_right = 20.0
+offset_bottom = -375.0
+texture = ExtResource("7_vp75d")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Ingredients" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Ingredient" type="Control" parent="Ingredients"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Icon" type="AnimatedSprite2D" parent="Ingredients/Ingredient"]
+position = Vector2(-216, -108)
+scale = Vector2(0.076, 0.076)
+sprite_frames = SubResource("SpriteFrames_ny37g")
+
+[node name="QuantityText" type="Label" parent="Ingredients/Ingredient"]
+layout_mode = 0
+offset_left = -193.0
+offset_top = -124.0
+offset_right = -131.0
+offset_bottom = -93.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "x1"
+
+[node name="Ingredient2" type="Control" parent="Ingredients"]
+anchors_preset = 0
+offset_left = 137.0
+offset_right = 177.0
+offset_bottom = 40.0
+
+[node name="Icon" type="AnimatedSprite2D" parent="Ingredients/Ingredient2"]
+position = Vector2(-216, -108)
+scale = Vector2(0.076, 0.076)
+sprite_frames = SubResource("SpriteFrames_ny37g")
+
+[node name="QuantityText" type="Label" parent="Ingredients/Ingredient2"]
+layout_mode = 0
+offset_left = -193.0
+offset_top = -124.0
+offset_right = -131.0
+offset_bottom = -93.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "x1"
+
+[node name="Ingredient3" type="Control" parent="Ingredients"]
+anchors_preset = 0
+offset_left = 273.0
+offset_right = 313.0
+offset_bottom = 40.0
+
+[node name="Icon" type="AnimatedSprite2D" parent="Ingredients/Ingredient3"]
+position = Vector2(-216, -108)
+scale = Vector2(0.076, 0.076)
+sprite_frames = SubResource("SpriteFrames_ny37g")
+
+[node name="QuantityText" type="Label" parent="Ingredients/Ingredient3"]
+layout_mode = 0
+offset_left = -193.0
+offset_top = -124.0
+offset_right = -131.0
+offset_bottom = -93.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "x1"
+
+[node name="Ingredient4" type="Control" parent="Ingredients"]
+anchors_preset = 0
+offset_left = 1.0
+offset_top = 58.0
+offset_right = 41.0
+offset_bottom = 98.0
+
+[node name="Icon" type="AnimatedSprite2D" parent="Ingredients/Ingredient4"]
+position = Vector2(-216, -108)
+scale = Vector2(0.076, 0.076)
+sprite_frames = SubResource("SpriteFrames_ny37g")
+
+[node name="QuantityText" type="Label" parent="Ingredients/Ingredient4"]
+layout_mode = 0
+offset_left = -193.0
+offset_top = -124.0
+offset_right = -131.0
+offset_bottom = -93.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "x1"
+
+[node name="Ingredient5" type="Control" parent="Ingredients"]
+anchors_preset = 0
+offset_left = 137.0
+offset_top = 58.0
+offset_right = 177.0
+offset_bottom = 98.0
+
+[node name="Icon" type="AnimatedSprite2D" parent="Ingredients/Ingredient5"]
+position = Vector2(-216, -108)
+scale = Vector2(0.076, 0.076)
+sprite_frames = SubResource("SpriteFrames_ny37g")
+
+[node name="QuantityText" type="Label" parent="Ingredients/Ingredient5"]
+layout_mode = 0
+offset_left = -193.0
+offset_top = -124.0
+offset_right = -131.0
+offset_bottom = -93.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "x1"
+
+[connection signal="mouse_entered" from="ActionButton" to="." method="_on_action_button_mouse_entered"]
+[connection signal="mouse_exited" from="ActionButton" to="." method="_on_action_button_mouse_exited"]
